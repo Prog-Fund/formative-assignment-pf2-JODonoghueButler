@@ -84,7 +84,11 @@ public class Product {
      * @param productName The new Product Name
      */
     public void setProductName(String productName) {
-        this.productName = productName;
+        if(productName != null) {
+            if (productName.length() <= 20) {
+                this.productName = productName;
+            }
+        }
     }
     /**
      * Updates the Unit Cost to the value passed as a parameter
