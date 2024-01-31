@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * The store class saves all the entered products into a primitive array.
  *
@@ -153,4 +155,11 @@ public class Store {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Store{" +
+                "products=" + Arrays.toString(products) +
+                ", total=" + total +
+                '}';
+    }
 }

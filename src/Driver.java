@@ -140,5 +140,11 @@ public class Driver{
 
     //ask the user to enter a price and print out all products costing that price or more.
 
-
+    @Override
+    public String toString() {
+        return "Driver{" +
+                "input=" + input +
+                ", store=" + store +
+                '}';
+    }
 }
