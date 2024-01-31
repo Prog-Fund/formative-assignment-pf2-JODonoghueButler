@@ -32,6 +32,7 @@ public class Product {
 
         setUnitCost(unitCost);
         setProductCode(productCode);
+        this.inCurrentProductLine = inCurrentProductLine;
     }
 
     //-------
