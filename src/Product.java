@@ -22,7 +22,7 @@ public class Product {
      */
     public Product(String productName, int productCode, double unitCost, boolean inCurrentProductLine) {
        this.productName = productName;
-       this.unitCost = unitCost;
+       setUnitCost(unitCost);
        setProductCode(productCode);
     }
 
@@ -75,7 +75,7 @@ public class Product {
      * @param productName The new Product Name
      */
     public void setProductName(String productName) {
-        if(productName.length()>20)
+        if(productName.length()<20)
         {
             this.productName = productName;
         }
@@ -85,7 +85,10 @@ public class Product {
      * @param unitCost The new unit cost for the product
      */
     public void setUnitCost(double unitCost) {
+        if(unitCost > 0)
+        {
             this.unitCost = unitCost;
+        }
     }
     /**
      * Updates the boolean indicating whether the product is in the current product line or not.
