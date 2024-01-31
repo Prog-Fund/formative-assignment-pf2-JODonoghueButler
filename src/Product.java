@@ -21,7 +21,10 @@ public class Product {
      * @param unitCost Unit cost of the product - valid values are any positive number
      */
     public Product(String productName, int productCode, double unitCost, boolean inCurrentProductLine) {
-       this.productName = productName;
+        if(productName.length() > 20)
+        {
+            productName.substring(0,20);
+        }
        setUnitCost(unitCost);
        setProductCode(productCode);
     }
@@ -75,10 +78,7 @@ public class Product {
      * @param productName The new Product Name
      */
     public void setProductName(String productName) {
-        if(productName.length()<20)
-        {
-            this.productName = productName;
-        }
+        this.productName = productName;
     }
     /**
      * Updates the Unit Cost to the value passed as a parameter
