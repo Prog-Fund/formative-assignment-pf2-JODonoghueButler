@@ -114,11 +114,10 @@ public class Product {
      */
     @Override
     public String toString() {
-        return "Product{" +
-                "productName='" + productName + '\'' +
-                ", productCode=" + productCode +
-                ", unitCost=" + unitCost +
-                ", inCurrentProductLine=" + inCurrentProductLine +
-                '}';
+        return "Product" +
+                "Product description: " + productName +
+                "product code: " + productCode +
+                "unit cost: " + unitCost +
+                "currently in product line: " + (inCurrentProductLine ? 'Y' : 'N');
     }
 }
